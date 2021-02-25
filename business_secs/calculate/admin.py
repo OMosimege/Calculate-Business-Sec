@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+@admin.register(Business_Secs)
+class Business_SecsAdmin(BaseEventAdmin):
+    list_display = ("start_time", "end_time")
+
