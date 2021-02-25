@@ -12,10 +12,6 @@ class Business_SecsViewSet(GenericViewSet, CreateModelMixin):
     permission_classes = (DjangoModelPermissions,)
     name = "business-secs"
 
-    def post(self, request, format=None):
-        print(request.GET)
-        serializer = SnippetSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    def get(self, request, format=None):
+        data = request.data
+        print(data)

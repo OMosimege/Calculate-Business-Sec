@@ -3,6 +3,6 @@ from django.utils import timezone
 
 
 class Business_Secs(models.Model):
-    start_time = models.DateTimeField(blank=True)
-    end_time = models.DateTimeField(blank=True)
-    business_seconds = models.DateTimeField(blank=True)
+    start_time = models.DateTimeField(default=timezone.now)
+    end_time = models.DateTimeField(default=timezone.now)
+    business_seconds = models.DateTimeField(default=timezone.now)
