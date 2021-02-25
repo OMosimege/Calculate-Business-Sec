@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # our apps
     "django_blog.apps.common.apps.CommonConfig",
     "django_blog.apps.account.apps.AccountConfig",
+    "django_blog.apps.business_calculator.apps.BlogConfig"
 ] + env.list("DJANGO_BLOG_DEV_INSTALLED_APPS", default=[])
 
 MIDDLEWARE = [
