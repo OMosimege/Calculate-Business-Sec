@@ -1,3 +1,7 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+
+class Business_Secs(models.Model):
+    start_time = models.DateTimeField(default=timezone.now)
+    end_time = models.DateTimeField(default=timezone.now)
